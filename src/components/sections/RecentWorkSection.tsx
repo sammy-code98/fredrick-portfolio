@@ -1,87 +1,262 @@
-import { Box, Text, Divider, HStack, Link } from '@chakra-ui/react'
-import React, { useEffect } from 'react'
-import { Button, WorksCard, WorksCarousel } from '../utility';
+import React, { useEffect, useRef } from 'react';
+import { Box, Text, Divider, HStack, Link } from "@chakra-ui/react";
+import { Button, WorksCard, WorksCarousel } from "../utility";
 // import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
-
+// import 'aos/dist/aos.css';
 
 const RecentWork = [
     {
-        title: 'ASUZA GAMING',
-        description: 'Asuza is an Esport Management platform that specializes in fostering the growth of gamers within and outside of Africa.',
-        role: ['UI DESIGN', 'UX DESIGN', 'CONCEPT'],
-        serviceType: ['CASE STUDY', 'MOBILE DESIGN', 'BRANDING']
+        id: "asuza",
+        title: "ASUZA GAMING",
+        description:
+            "Asuza is an Esport Management platform that specializes in fostering the growth of gamers within and outside of Africa.",
+        role: ["UI DESIGN", "UX DESIGN", "CONCEPT"],
+        serviceType: ["CASE STUDY", "MOBILE DESIGN", "BRANDING"],
     },
     {
-        title: 'VIBE BETA',
-        description: 'VIBE BETA is a cutting-edge music app that helps up-and-coming talent get discovered.',
-        role: ['UI DESIGN', 'UX DESIGN', 'REDESIGN'],
-        serviceType: ['WEB DESIGN ', 'MOBILE DESIGN']
+        id: "vibe",
+        title: "VIBE BETA",
+        description:
+            "VIBE BETA is a cutting-edge music app that helps up-and-coming talent get discovered.",
+        role: ["UI DESIGN", "UX DESIGN", "REDESIGN"],
+        serviceType: ["WEB DESIGN ", "MOBILE DESIGN"],
     },
     {
-        title: 'WHATSAPP STATUS',
-        description: 'AN IMPROVEMENT TO THE WHATSAPP STATUS UI AND A BRAND NEW FEATURE ROLE OUT',
-        role: ['UI DESIGN', 'UX DESIGN', 'REDESIGN'],
-        serviceType: ['CASE STUDY ', 'MOBILE DESIGN']
+        id: "whatsapp",
+        title: "WHATSAPP STATUS",
+        description:
+            "AN IMPROVEMENT TO THE WHATSAPP STATUS UI AND A BRAND NEW FEATURE ROLE OUT",
+        role: ["UI DESIGN", "UX DESIGN", "REDESIGN"],
+        serviceType: ["CASE STUDY ", "MOBILE DESIGN"],
     },
     {
-        title: 'SLEEPY APP',
-        description: 'Sleepy is a product designed to improve the quality of life for individuals with sleep difficulties. ',
-        role: ['UI DESIGN', 'UX DESIGN'],
-        serviceType: ['CASE STUDY', 'MOBILE DESIGN']
-    }
-]
+        id: "sleepy",
+        title: "SLEEPY APP",
+        description:
+            "Sleepy is a product designed to improve the quality of life for individuals with sleep difficulties. ",
+        role: ["UI DESIGN", "UX DESIGN"],
+        serviceType: ["CASE STUDY", "MOBILE DESIGN"],
+    },
+];
 
 export default function RecentWorkSection() {
-    // useEffect(() => {
-    //     AOS.init();
 
-    // }, [])
+    const slidephotosRef = useRef<HTMLDivElement>(null);
+    const asuzaRef = useRef<HTMLDivElement>(null);
+    const vibeRef = useRef<HTMLDivElement>(null);
+    const whatsappRef = useRef<HTMLDivElement>(null);
+    const sleepyRef = useRef<HTMLDivElement>(null);
+    const slidephotoRef = useRef<HTMLDivElement>(null);
+
+    const handleAsuzaMouseMove = () => {
+        const slidephotos = slidephotosRef.current;
+        const asuza = asuzaRef.current;
+        if (slidephotos) {
+            slidephotos.style.marginTop = '0px';
+        }
+        if (asuza) {
+            asuza.style.color = 'rgb(177, 177, 177)';
+        }
+    };
+
+    const handleAsuzaMouseLeave = () => {
+        const asuza = asuzaRef.current;
+        if (asuza) {
+            asuza.style.color = 'initial';
+        }
+    };
+
+    const handleVibeMouseMove = () => {
+        const slidephotos = slidephotosRef.current;
+        const vibe = vibeRef.current;
+        if (slidephotos) {
+            slidephotos.style.marginTop = '-120%';
+        }
+        if (vibe) {
+            vibe.style.color = 'rgb(177, 177, 177)';
+        }
+    };
+
+    const handleVibeMouseLeave = () => {
+        const vibe = vibeRef.current;
+        if (vibe) {
+            vibe.style.color = 'initial';
+        }
+    };
+
+    const handleWhatsappMouseMove = () => {
+        const slidephotos = slidephotosRef.current;
+        const whatsapp = whatsappRef.current;
+        if (slidephotos) {
+            slidephotos.style.marginTop = '-240%';
+        }
+        if (whatsapp) {
+            whatsapp.style.color = 'rgb(177, 177, 177)';
+        }
+    };
+
+    const handleWhatsappMouseLeave = () => {
+        const whatsapp = whatsappRef.current;
+        if (whatsapp) {
+            whatsapp.style.color = 'initial';
+        }
+    };
+
+    const handleSleepysoMouseMove = () => {
+        const slidephotos = slidephotosRef.current;
+        const sleepy = sleepyRef.current;
+        if (slidephotos) {
+            slidephotos.style.marginTop = '-360%';
+        }
+        if (sleepy) {
+            sleepy.style.color = 'rgb(177, 177, 177)';
+        }
+    };
+
+    const handleSleepysoMouseLeave = () => {
+        const sleepy = sleepyRef.current;
+        if (sleepy) {
+            sleepy.style.color = 'initial';
+        }
+    };
+
+    const handleEffMouseMove = () => {
+        const slidephoto = slidephotoRef.current;
+        if (slidephoto) {
+            slidephoto.style.display = 'initial';
+            slidephoto.style.opacity = '1';
+            slidephoto.style.scale = '1';
+        }
+    };
+
+    const handleEffMouseLeave = () => {
+        const slidephoto = slidephotoRef.current;
+        if (slidephoto) {
+            slidephoto.style.display = 'none';
+            slidephoto.style.opacity = '1';
+            slidephoto.style.scale = '0';
+        }
+    };
+
+
+
+    useEffect(() => {
+        const handleSlidephotoMouseMove = (event: MouseEvent) => {
+            const slidephoto = slidephotoRef.current;
+            if (slidephoto) {
+                slidephoto.style.top = `${event.clientY}px`;
+                slidephoto.style.left = `${event.clientX}px`;
+                slidephoto.style.transform = `translate(${-event.clientX * 0.21}px, ${-event.clientY * 0.7}px)`;
+                slidephoto.style.cursor = 'pointer';
+            }
+        };
+
+        window.addEventListener('mousemove', handleSlidephotoMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleSlidephotoMouseMove);
+        };
+    }, []);
+
+    const mouseAction: {
+        [key: string]: {
+            onMouseMove: () => void,
+            onMouseLeave: () => void
+        }
+    } = {
+        'asuza': {
+            onMouseMove: handleAsuzaMouseMove,
+            onMouseLeave: handleAsuzaMouseLeave
+        },
+        'vibe': {
+            onMouseMove: handleVibeMouseMove,
+            onMouseLeave: handleVibeMouseLeave
+        },
+        'whatsapp': {
+            onMouseMove: handleWhatsappMouseMove,
+            onMouseLeave: handleWhatsappMouseLeave
+        },
+        'sleepy': {
+            onMouseMove: handleSleepysoMouseMove,
+            onMouseLeave: handleSleepysoMouseLeave
+        },
+    }
 
     return (
-        <Box mt='4rem' py='4rem' as='section' id='recentWorks'>
-            <Text color='royalWhite' fontSize='xl'>RECENT WORKS</Text>
-            <Box mt='4rem'>
-                <Divider />
-                <Box mt='3rem'>
-                    {RecentWork.map((work) => (
-                        <WorksCard
-                            key={work.title}
-                            description={work.description}
-                            role={work.role}
-                            serviceType={work.serviceType}
-                            title={work.title} />
-                    ))}
+        <Box>
+            <Box id="slidephoto" ref={slidephotoRef}>
+                <div id="slidephotos">
+                    <div className="photu"></div>
+                    <div className="photu"></div>
+                    <div className="photu"></div>
+                    <div className="photu"></div>
+                </div>
+                <div id="view">
+                    <h1>View</h1>
+                </div>
+            </Box>
+            <Box mt="4rem" py="4rem" as="section" id="recentWorks">
+                <Text color="royalWhite" fontSize="xl">
+                    RECENT WORKS
+                </Text>
+                <Box mt="4rem">
+                    <Divider />
+                    <Box mt="3rem" id="eff" onMouseMove={handleEffMouseMove} onMouseLeave={handleEffMouseLeave}>
+                        {RecentWork.map((work) => (
+                            <Box id={work.id} key={work.title} onMouseMove={mouseAction[work.id].onMouseMove} onMouseLeave={mouseAction[work.id].onMouseLeave}>
+                                <WorksCard
+                                    description={work.description}
+                                    role={work.role}
+                                    serviceType={work.serviceType}
+                                    title={work.title}
+                                />
+                            </Box>
+                        ))}
+                    </Box>
                 </Box>
-            </Box>
-            <Box display='flex' justifyContent='center'>
-                <Button title='MORE OF MY WORKS' />
-            </Box>
+                <Box display="flex" justifyContent="center">
+                    <Button title="MORE OF MY WORKS" />
+                </Box>
 
-            <Box as='div'
-            // data-aos="fade-zoom-in"
-            // data-aos-easing="ease-in-back"
-            // data-aos-delay="300"
-            // data-aos-offset="0"
-            >
-                <WorksCarousel />
-                <Box display={{ base: 'none', md: 'flex' }}
-                    justifyContent='space-between' alignItems='center' pb='2rem' mt={{ base: '1rem', md: '8rem' }} flexWrap='wrap'>
-                    <HStack>
-                        <Text color='royalWhite' textDecoration='underline'>BEHANCE </Text>
-                        <Text color='royalWhite' textDecoration='underline'>DRIBBLE</Text>
-                        <Text color='royalWhite' textDecoration='underline'>INSTAGRAM</Text>
-                        <Text color='royalWhite' textDecoration='underline'>LINKEDIN</Text>
-                    </HStack>
+                <Box
+                    as="div"
+                // data-aos="fade-zoom-in"
+                // data-aos-easing="ease-in-back"
+                // data-aos-delay="300"
+                // data-aos-offset="0"
+                >
+                    <WorksCarousel />
+                    <Box
+                        display={{ base: "none", md: "flex" }}
+                        justifyContent="space-between"
+                        alignItems="center"
+                        pb="2rem"
+                        mt={{ base: "1rem", md: "8rem" }}
+                        flexWrap="wrap"
+                    >
+                        <HStack>
+                            <Text color="royalWhite" textDecoration="underline">
+                                BEHANCE{" "}
+                            </Text>
+                            <Text color="royalWhite" textDecoration="underline">
+                                DRIBBLE
+                            </Text>
+                            <Text color="royalWhite" textDecoration="underline">
+                                INSTAGRAM
+                            </Text>
+                            <Text color="royalWhite" textDecoration="underline">
+                                LINKEDIN
+                            </Text>
+                        </HStack>
 
-                    <Box>
-                        <Link href='/#top'>
-                        <Text color='royalGold'>BACK TO TOP</Text>
-                        </Link>
+                        <Box>
+                            <Link href="/#top">
+                                <Text color="royalGold">BACK TO TOP</Text>
+                            </Link>
+                        </Box>
                     </Box>
                 </Box>
             </Box>
-        </Box >
-
-    )
+        </Box>
+    );
 }
