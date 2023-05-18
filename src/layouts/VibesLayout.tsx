@@ -9,8 +9,7 @@ export default function VibeLayout({ children }: PageProps): JSX.Element {
     return (
         <Box>
             <NavBar />
-            <Box
-            >
+            <Box>
                 {children}
             </Box>
         </Box>
