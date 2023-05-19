@@ -7,18 +7,9 @@ interface HomeProps {
 }
 export default function HomeLayout({ children }: HomeProps): JSX.Element {
     return (
-        <Box data-scroll-section>
+        <Box>
             <NavBar />
-            <Box
-                px={{ base: '1rem', md: '4rem' }}
-                // h='100%'
-                // bgImage="url('/bgParralex.jpg')"
-                // bgSize='cover'
-                // bgAttachment={{ base: 'scroll', md: 'fixed' }}
-                // bgRepeat='no-repeat'
-                // bgPosition='center'
-                // pos='relative'
-            >
+            <Box px={{ base: '1rem', md: '4rem' }}>
                 {children}
             </Box>
         </Box>

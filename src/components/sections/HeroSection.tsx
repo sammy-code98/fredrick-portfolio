@@ -1,6 +1,6 @@
-import { Box, Heading, HStack, Text, Link } from '@chakra-ui/react'
+import { Box, Heading, Text, Link } from '@chakra-ui/react'
 import React from 'react'
-import { ScrollButton } from '../utility'
+import { ScrollButton, SocialAccount } from '../utility'
 
 
 export default function HeroSection() {
@@ -42,13 +42,7 @@ export default function HeroSection() {
             </Box>
             <Box display={{ base: 'block', md: 'flex' }}
                 justifyContent='space-between' alignItems='center' mt={{ base: '2rem', md: '8rem' }} >
-                <HStack display={{ base: 'none', md: 'flex' }}>
-                    <Text color='royalWhite' textDecoration='underline'>BEHANCE </Text>
-                    <Text color='royalWhite' textDecoration='underline'>DRIBBLE</Text>
-                    <Text color='royalWhite' textDecoration='underline'>INSTAGRAM</Text>
-                    <Text color='royalWhite' textDecoration='underline'>LINKEDIN</Text>
-                </HStack>
-
+                <SocialAccount />
                 <Box display='flex' justifyContent='flex-end'  >
                     <Text textAlign='right' color='royalWhite'>Ⓒ 2023</Text>
                 </Box>

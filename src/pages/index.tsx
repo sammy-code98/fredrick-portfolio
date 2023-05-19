@@ -1,17 +1,12 @@
 import Head from "next/head";
 import "@fontsource/inter";
 import Loadable from "react-loadable";
-import { Box, Text, Heading, HStack, Link } from '@chakra-ui/react'
+import { Box, Text, Heading, Link } from '@chakra-ui/react'
 import { HomeLayout } from '@/layouts'
 import { AboutSection, HeroSection, RecentWorkSection } from '@/components/sections'
-import { Button } from '@/components/utility'
+import { Button, SocialAccount } from '@/components/utility'
+import { socialLinks } from "@/staticData";
 
-
-const socialLinks = [
-  { title: "EMAIL", url: "/email" },
-  { title: "INSTAGRAM", url: "/insta" },
-  { title: "TWITTER", url: "/twitter" },
-];
 
 export default function Index() {
   return (
@@ -26,7 +21,6 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box as='div'
-        // ref={ref}
         bg="primary">
 
         <HomeLayout>
@@ -87,17 +81,7 @@ export default function Index() {
               mt={{ base: "1rem", md: "8rem" }}
             >
               <Box>
-                <HStack>
-                  <Text color="royalWhite" fontSize={{ base: "sm", md: "md" }} textDecoration="underline">
-                    BEHANCE{" "}
-                  </Text>
-                  <Text color="royalWhite" fontSize={{ base: "sm", md: "md" }} textDecoration="underline">
-                    DRIBBLE
-                  </Text>
-                  <Text color="royalWhite" fontSize={{ base: "sm", md: "md" }} textDecoration="underline">
-                    LINKEDIN
-                  </Text>
-                </HStack>
+                <SocialAccount />
               </Box>
 
               <Box>

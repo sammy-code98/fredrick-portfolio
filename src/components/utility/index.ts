@@ -5,6 +5,9 @@ import WorksCarousel from "./WorksCarousel";
 import ScrollButton from "./ScrollButton";
 import ProjectDetail from "./ProjectDetail";
 import VibesCarousel from "./VibesCarousel";
+import SocialAccount from "./SocialAccount";
+
+
 export {
   NavBar,
   Button,
@@ -13,4 +16,5 @@ export {
   ScrollButton,
   ProjectDetail,
   VibesCarousel,
+  SocialAccount,
 };
