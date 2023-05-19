@@ -1,7 +1,7 @@
 import Head from "next/head";
 import "@fontsource/inter";
 import Loadable from "react-loadable";
-import { Box, Text, Heading, HStack, Link } from '@chakra-ui/react'
+import { Box, Text, Heading, Link } from '@chakra-ui/react'
 import { HomeLayout } from '@/layouts'
 import { AboutSection, HeroSection, RecentWorkSection } from '@/components/sections'
 import { Button, SocialAccount } from '@/components/utility'

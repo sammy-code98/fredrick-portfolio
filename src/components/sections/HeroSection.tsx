@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Text, Link } from '@chakra-ui/react'
+import { Box, Heading, Text, Link } from '@chakra-ui/react'
 import React from 'react'
 import { ScrollButton, SocialAccount } from '../utility'
 

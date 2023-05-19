@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Box, Text, Divider, HStack, Link } from "@chakra-ui/react";
+import { Box, Text, Divider, Link } from "@chakra-ui/react";
 import { Button, WorksCard, WorksCarousel, SocialAccount } from "../utility";
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';

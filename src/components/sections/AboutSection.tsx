@@ -1,4 +1,4 @@
-import { Box, HStack, Text, Link } from '@chakra-ui/react'
+import { Box, Text, Link } from '@chakra-ui/react'
 import React from 'react'
 import Star from "public/star.svg"
 import Image from 'next/image'

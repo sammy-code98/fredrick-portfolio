@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, HStack, Text, Link } from '@chakra-ui/react'
+import { Box, Text, Link } from '@chakra-ui/react'
 import { VibeLayout } from '@/layouts'
-import { ProjectDetail, VibesCarousel } from '@/components/utility'
+import { ProjectDetail, VibesCarousel, SocialAccount } from '@/components/utility'
 import Image from 'next/image'
 import oldVibes from "public/Vibes/oldVibes.png"
 import newVibes from "public/Vibes/newVibes.png"
@@ -92,7 +92,6 @@ export default function Vibebeta() {
                         <Box
                             mt={{ base: '1rem', md: '2rem' }}
                             width={{ base: 'none', md: '500px' }}
-
                         >
                             <Text color='royalWhite'>
                                 The design solution for Vibe Beta was developed through competitive analysis and user persona research. This research was conducted by talking with artists and analyzing the problems of the biggest competitors in the industry, such as Soundcloud and Spotify.
@@ -111,11 +110,7 @@ export default function Vibebeta() {
                     <Box>
                         <Box display='flex' justifyContent='space-between' alignItems='center' px='2rem' pb='2rem'
                             mt={{ base: '1rem', md: '8rem' }} flexWrap='wrap'>
-                            <HStack>
-                                <Text color='royalWhite' fontSize={{ base: 'sm', md: 'md' }} textDecoration='underline'>BEHANCE </Text>
-                                <Text color='royalWhite' fontSize={{ base: 'sm', md: 'md' }} textDecoration='underline'>DRIBBLE</Text>
-                                <Text color='royalWhite' fontSize={{ base: 'sm', md: 'md' }} textDecoration='underline'>LINKEDIN</Text>
-                            </HStack>
+                            <SocialAccount />
                             <Box display={{ base: 'none', md: 'flex' }} gap={4} alignItems='center'>
                                 <Text color='royalWhite'>PREVIOUS PROJECT </Text>
                                 <Text color='royalWhite'>NEXT PROJECT </Text>

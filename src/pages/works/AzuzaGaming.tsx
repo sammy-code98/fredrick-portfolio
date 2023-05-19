@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, HStack, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import { PageLayout } from '@/layouts'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ProjectDetail } from '@/components/utility'
+import { ProjectDetail, SocialAccount } from '@/components/utility'
 import Azuza from "public/Azuza/Azuza.png"
 import azuzaGraphics from "public/Azuza/azuzaGraphics.png"
 import azuzaBg from "public/Azuza/azuzacommunity.png"
@@ -139,15 +139,10 @@ export default function AzuzaGaming() {
                         </Box>
                     </Box>
 
-
                     <Box>
                         <Box display='flex' justifyContent='space-between' alignItems='center' pb='2rem'
                             mt={{ base: '1rem', md: '8rem' }} flexWrap='wrap'>
-                            <HStack>
-                                <Text color='black' fontSize={{ base: 'sm', md: 'md' }} textDecoration='underline'>BEHANCE </Text>
-                                <Text color='black' fontSize={{ base: 'sm', md: 'md' }} textDecoration='underline'>DRIBBLE</Text>
-                                <Text color='black' fontSize={{ base: 'sm', md: 'md' }} textDecoration='underline'>LINKEDIN</Text>
-                            </HStack>
+                            <SocialAccount />
                             <Box display={{ base: 'none', md: 'flex' }} gap={4} alignItems='center'>
                                 <Text color='black'>PREVIOUS PROJECT </Text>
                                 <Text color='black'>NEXT PROJECT </Text>
