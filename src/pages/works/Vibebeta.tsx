@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Text, Link } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import { VibeLayout } from '@/layouts'
+import Link from 'next/link'
 import { ProjectDetail, VibesCarousel, SocialAccount } from '@/components/utility'
 import Image from 'next/image'
 import oldVibes from "public/Vibes/oldVibes.png"
@@ -116,7 +117,9 @@ export default function Vibebeta() {
                                 <Text color='royalWhite'>NEXT PROJECT </Text>
                             </Box>
                             <Box>
+                                <Link href="#top">
                                 <Text color='royalGold' fontSize={{ base: 'sm', md: 'md' }}>BACK TO TOP</Text>
+                                </Link>
                             </Box>
                         </Box>
                     </Box>
