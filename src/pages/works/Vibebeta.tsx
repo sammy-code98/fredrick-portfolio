@@ -89,7 +89,6 @@ export default function Vibebeta() {
                     >
                         <Text color='royalGold' fontSize='2xl' fontWeight='bold'>DESIGN SOLUTIONS</Text>
                         <VibesCarousel />
-
                         <Box
                             mt={{ base: '1rem', md: '2rem' }}
                             width={{ base: 'none', md: '500px' }}

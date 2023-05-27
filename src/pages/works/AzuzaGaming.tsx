@@ -125,6 +125,16 @@ export default function AzuzaGaming() {
                                 </Box>
 
                             </Box>
+
+
+                        </Box>
+                        <Box
+                            backgroundImage="url('public/Azuza/ring_2.png')"
+                            backgroundPosition="center"
+                            backgroundRepeat="no-repeat"
+                            py='3rem'
+                            height='100%'
+                        >
                             <Box width={{ base: 'none', md: '600px' }} mt='3rem'>
                                 <Text>
                                     Through a thorough brainstorming process and competitive analysis, I was able to generate design solutions for Asuza that incorporated feedback from the team. These solutions included the implementation of a campaign feature, a blog and news tab, and other features that helped to enhance the user experience and set Asuza apart in
@@ -132,15 +142,17 @@ export default function AzuzaGaming() {
                                 </Text>
                             </Box>
 
-                        </Box>
-
-                        <Box mt='1rem' width={{ base: 'none', md: '500px' }}
+                            <Box mt='1rem' width={{ base: 'none', md: '500px' }}
                             ml={{ base: '0', md: '56rem' }} py='2rem'
                         >
                             <Text mb='0.5rem' color='black'>
                                 Gamification of the Asuza platform was a key strategy for increasing user engagement. This was achieved through the implementation of features that made it easy for regular users to host tournaments and promote them within and outside of the platform. Additionally, we introduced a reward system to increase user curiosity and drive participation. These efforts helped to make Asuza a more dynamic and engaging experience for all users.
                             </Text>
                         </Box>
+
+                        </Box>
+
+
                     </Box>
 
                     <Box>
