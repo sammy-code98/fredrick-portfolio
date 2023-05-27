@@ -14,7 +14,6 @@ import design_1 from "public/Azuza/desing_1.png"
 import design_2 from "public/Azuza/desing_2.png"
 
 
-
 export default function AzuzaGaming() {
     return (
         <Box bg='secondaryGrey' >
@@ -65,7 +64,15 @@ export default function AzuzaGaming() {
                     <Box py='4rem' display='flex' justifyContent='center'>
                         <Image src={azuzaBg} alt='azuza' loading='lazy' />
                     </Box>
-                    <Box mt='1rem' width={{ base: 'none', md: '500px' }}
+
+                    <Box
+                        backgroundImage="url('public/Azuza/ring.png')"
+                        backgroundPosition="center"
+                        backgroundRepeat="no-repeat"
+                        py='3rem'
+                        height='100%'
+                    >
+                        <Box mt='1rem' width={{ base: 'none', md: '500px' }}
                         ml={{ base: '0', md: '56rem' }} py='2rem'
                     >
                         <Text color='black' fontSize='xl' fontWeight='bold'>GOAL</Text>
@@ -76,21 +83,18 @@ export default function AzuzaGaming() {
                             I worked to achieve these objectives and enhance the overall value of the platform for all users
                         </Text>
                     </Box>
-                    <Box bgImage="url('public/ring.svg')"
-                        bgPosition="center"
-                        bgRepeat="no-repeat"
-                        py='3rem'
-                    >
-                        <Box width={{ base: 'none', md: '500px' }} py='2rem'
-                        >
+
+                        <Box width={{ base: 'none', md: '500px' }} py='2rem'>
                             <Text color='black' fontSize='xl' fontWeight='bold'>MY WORK PROCESS</Text>
                             <Text color='black'>
                                 The design process for Asuza began with the creation of a mood board to establish the desired brand identity and user experience. I developed two themes for the site - one with a neon tech aesthetic and the other with an African community focus. After presenting these options to the Asuza team and receiving feedback, we ultimately decided that the neon tech theme best reflected the community we were building.
                                 This decision was made through careful consideration and collaboration with the team.
                             </Text>
                         </Box>
-
                     </Box>
+
+
+
                     <Box py='1rem' mt='2rem' display='flex' justifyContent='center' alignItems='center' gap={2} flexWrap='wrap'>
                         <Image src={process_1} alt='azuza' loading='lazy' />
                         <Image src={process_2} alt='azuza' loading='lazy' />
@@ -121,6 +125,16 @@ export default function AzuzaGaming() {
                                 </Box>
 
                             </Box>
+
+
+                        </Box>
+                        <Box
+                            backgroundImage="url('public/Azuza/ring_2.png')"
+                            backgroundPosition="center"
+                            backgroundRepeat="no-repeat"
+                            py='3rem'
+                            height='100%'
+                        >
                             <Box width={{ base: 'none', md: '600px' }} mt='3rem'>
                                 <Text>
                                     Through a thorough brainstorming process and competitive analysis, I was able to generate design solutions for Asuza that incorporated feedback from the team. These solutions included the implementation of a campaign feature, a blog and news tab, and other features that helped to enhance the user experience and set Asuza apart in
@@ -128,15 +142,17 @@ export default function AzuzaGaming() {
                                 </Text>
                             </Box>
 
-                        </Box>
-
-                        <Box mt='1rem' width={{ base: 'none', md: '500px' }}
+                            <Box mt='1rem' width={{ base: 'none', md: '500px' }}
                             ml={{ base: '0', md: '56rem' }} py='2rem'
                         >
                             <Text mb='0.5rem' color='black'>
                                 Gamification of the Asuza platform was a key strategy for increasing user engagement. This was achieved through the implementation of features that made it easy for regular users to host tournaments and promote them within and outside of the platform. Additionally, we introduced a reward system to increase user curiosity and drive participation. These efforts helped to make Asuza a more dynamic and engaging experience for all users.
                             </Text>
                         </Box>
+
+                        </Box>
+
+
                     </Box>
 
                     <Box>
@@ -148,7 +164,9 @@ export default function AzuzaGaming() {
                                 <Text color='black'>NEXT PROJECT </Text>
                             </Box>
                             <Box>
-                                <Text fontSize={{ base: 'sm', md: 'md' }} color='royalGold'>BACK TO TOP</Text>
+                                <Link href='#top'>
+                                    <Text fontSize={{ base: 'sm', md: 'md' }} fontWeight='medium' color='royalGold'>BACK TO TOP</Text>
+                                </Link>
                             </Box>
                         </Box>
                     </Box>

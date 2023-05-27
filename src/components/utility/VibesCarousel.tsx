@@ -46,12 +46,9 @@ export default function VibesCarousel() {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerPadding: "10px",
-
                 }
             },
         ],
-
-
     }
     return (
         <Box mt='4rem'>

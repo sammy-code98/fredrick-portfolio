@@ -17,6 +17,7 @@ import {
 import Image from "next/image"
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Logo from "public/logo.svg"
+import LogoWhite from "public/logoWhite.png"
 import { useRouter } from 'next/router'
 
 
@@ -73,7 +74,7 @@ export default function NavBar() {
 
                         <Box px={{ base: 'none', md: '2rem' }}>
                             <Link href='/'>
-                                <Image src={Logo} alt='logo' loading='lazy' />
+                                <Image src={router.asPath === href ? LogoWhite : Logo} alt='logo' loading='lazy' />
                             </Link>
                         </Box>
 
