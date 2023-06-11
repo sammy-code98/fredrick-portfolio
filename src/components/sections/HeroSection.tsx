@@ -5,7 +5,7 @@ import { ScrollButton, SocialAccount } from '../utility'
 
 export default function HeroSection() {
     return (
-        <Box height='100vh'>
+        <Box height='100vh' maxHeight='100%'>
             <Box paddingX={{ base: "none", md: "4rem" }}>
                 <Box
                     display="flex"
