@@ -8,7 +8,7 @@ import { SocialAccount } from '../utility'
 
 export default function AboutSection() {
     return (
-            <Box py='4rem' as='section' id='aboutme'   >
+        <Box py='4rem' as='section' id='aboutme'   >
             <Text color='royalWhite' fontSize='xl'>About</Text>
             <Box mt='2rem'
                 display='grid'
