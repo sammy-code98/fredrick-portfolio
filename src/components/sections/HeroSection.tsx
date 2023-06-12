@@ -5,15 +5,17 @@ import { ScrollButton, SocialAccount } from '../utility'
 
 export default function HeroSection() {
     return (
-            <Box h='80vh'>
+        <Box height={{ base: '78vh', md: '100vh' }} maxHeight='100%'>
             <Box paddingX={{ base: "none", md: "4rem" }}>
                 <Box
                     display="flex"
                     gap={{ base: '2', md: '0' }}
-                    mt={{ base: '2rem', md: '8rem' }}
+                    mt={{ base: '6rem', md: '8rem' }}
                 >
                     <Box width={{ base: '100%', md: "65%", lg: '100%' }} >
-                        <Heading color='royalWhite' fontSize={{ base: '3rem', sm: "4rem", md: '8rem' }} lineHeight={{ base: "4.125rem", md: '8.125rem' }}>
+                        <Heading color='royalWhite' fontSize={{ base: '48px', sm: "4rem", md: '8rem' }}
+                            lineHeight={{ base: "60px", md: '8.125rem' }}
+                        >
                             Precious Ifeanyi   Fredrick
                         </Heading>
                     </Box>

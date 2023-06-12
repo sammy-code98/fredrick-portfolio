@@ -15,7 +15,8 @@ interface ImageCardProp {
 const sliderImageSty = {
     display: 'flex',
     justifyContent: 'center',
-    width: "100%",
+    gap: '4.1px',
+    width: { base: "243.94px", md: '441px' },
     height: { base: "177.15px", md: "27.625rem" },
     margin: 'auto',
     padding: {
@@ -52,7 +53,7 @@ export default function WorksCarousel() {
         ...settings
     }
     return (
-        <Box py='6rem' >
+        <Box py='6rem'>
             <Slider {...settings}>
                 {firstRowImages.map((work) => (
                     <ImageCard key={work.id} title={work.title} bg={work.bg} src={work.src} />
@@ -71,7 +72,7 @@ export default function WorksCarousel() {
 
 const ImageCard = ({ src, bg, title }: ImageCardProp) => {
     return (
-        <Box m='1rem' bg={bg} p='0.5rem'>
+        <Box m='1rem' bg={bg} mx='3rem' width={{ base: '243.94px', md: '441px' }}>
             <Box
                 position="relative"
                 alignItems="center"
@@ -85,7 +86,7 @@ const ImageCard = ({ src, bg, title }: ImageCardProp) => {
 
 const SecondImageCard = ({ src, bg, title }: ImageCardProp) => {
     return (
-        <Box m='1rem' bg={bg} p='0.5rem'>
+        <Box m='1rem' bg={bg} mx='3rem' width={{ base: '243.94px', md: '441px' }} >
             <Box
                 position="relative"
                 {...sliderImageSty}

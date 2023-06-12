@@ -8,9 +8,9 @@ import { SocialAccount } from '../utility'
 
 export default function AboutSection() {
     return (
-            <Box py='4rem' as='section' id='aboutme'   >
-            <Text color='royalWhite' fontSize='xl'>About</Text>
-            <Box mt='2rem'
+        <Box as='section' id='aboutme'  >
+            <Text color='royalGold' fontSize='xl' fontWeight={700}>About</Text>
+            <Box 
                 display='grid'
                 gridTemplateColumns={{
                     base: "repeat(1,minmax(0,1fr))",
@@ -24,13 +24,13 @@ export default function AboutSection() {
                 <Box mt={{ base: '0.5rem', md: '2rem' }} pos='relative' >
                     <Box
                         pos='absolute'
-                        width='245px'
-                        height="245px"
+                        width={{ base: '122.5px', md: '245px' }}
+                        height={{ base: '122.5px', md: '245px' }}
                         borderRadius='50%'
                         background='linear-gradient(91.26deg, rgba(232, 205, 79, 0.6) 28.98%, rgba(255, 255, 255, 0.6) 58.68%)'
                         filter='blur(142.917px)'
-                        left={{ base: '2rem', md: '28rem' }}
-                        top='-10rem'
+                        left={{ base: '200px', md: '28rem' }}
+                        top={{ base: '-59px', md: '-10rem' }}
                     ></Box>
                     <Box ml={{ base: '0', md: '-8rem' }} display={{ base: 'none', md: 'flex' }}>
                         <Image src={Star} alt='star' loading='lazy' />
@@ -43,7 +43,7 @@ export default function AboutSection() {
                 </Box>
             </Box>
 
-            <Box mt='12rem' >
+            <Box mt={{ base: '2.5rem', md: '6rem' }} >
                 <Box display='grid'
                     gridTemplateColumns={{
                         base: "repeat(1,minmax(0,1fr))",
@@ -54,8 +54,8 @@ export default function AboutSection() {
                 >
                     {aboutCard.map((card) => (
                         <Box key={card.title}>
-                            <Text color='royalGold'>{card.title}</Text>
-                            <Text color='royalWhite' mt='0.5rem'>
+                            <Text color='royalGold' fontWeight={700}>{card.title}</Text>
+                            <Text color='royalWhite' mt='0.5rem' fontWeight={400} lineHeight='140%'>
                                 {card.description}
                             </Text>
                         </Box>
