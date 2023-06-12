@@ -53,9 +53,9 @@ export default function VibesCarousel() {
     return (
         <Box mt='4rem'>
             <Slider {...settings} ref={sliderRef}>
-                <Image src={desing_soln} alt='designs' />
-                <Image src={design} alt='designs' />
-                <Image src={replace} alt='designs' />
+                <Image src={desing_soln} alt='designs soln' />
+                <Image src={design} alt='design img' />
+                <Image src={replace} alt='designs alt' />
             </Slider>
             <Box mt='1rem' display='flex' gap={4} justifyContent='flex-end'>
                 <PrevBtn onClick={sliderRef?.current?.slickPrev} />
