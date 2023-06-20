@@ -28,7 +28,7 @@ const Links = [
 
 ]
 
-const NavLink = ({ children, href }: { children: ReactNode, href: string }) => {
+const NavLink = ({ children, href, onClose }: { children: ReactNode, href: string, onClose?: () => void }) => {
     const route = useRouter()
     const link = "/works/AzuzaGaming"
 
@@ -39,7 +39,9 @@ const NavLink = ({ children, href }: { children: ReactNode, href: string }) => {
         rounded={'md'}
             color={route.asPath === link ? 'black' : 'royalWhite'}
             fontWeight={500}
-            href={href}>
+            href={href}
+            onClick={onClose}
+        >
         {children}
     </Link>
 
@@ -110,7 +112,8 @@ export default function NavBar() {
                                 <DrawerBody>
                                     <Stack as={'nav'} spacing={4}>
                             {Links.map((link) => (
-                                <NavLink key={link.title} href={link.href ?? '#'} >{link.title}</NavLink>
+                                <NavLink key={link.title} href={link.href ?? '#'} onClose={onClose}
+                                >{link.title}</NavLink>
                             ))}
                                     </Stack>
                                 </DrawerBody>
